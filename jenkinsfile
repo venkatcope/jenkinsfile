@@ -5,6 +5,7 @@ pipeline {
         stage('dev') {
             steps {
                 echo 'Iam in development stage'
+                git branch: 'main', credentialsId: 'my github acct', url: 'https://github.com/venkatcope/jenkinsfile'
             }
         }
         stage('build') {
